@@ -1,0 +1,53 @@
+{
+  "errorMessage": [
+    "Número do cartão é obrigatório",
+    "Nome do titular é obrigatório",
+    "Data de expiração é obrigatória",
+    "CVV é obrigatório",
+    "Selecione um banco"
+  ],
+  "validCard": {
+    "number": "4242424242424242",
+    "holderName": "Nelson Mendes",
+    "expirationDate": "12/30",
+    "cvv": "068",
+    "bank": "Inter",
+    "text": "Cartão cadastrado com sucesso!"
+  },
+  "badNumberCard": {
+    "scenario": "error",
+    "number": "5555555",
+    "holderName": "N",
+    "expirationDate": "12/30",
+    "cvv": "068",
+    "bank": "Neon",
+    "text": "Número de cartão inválido"
+  },
+  "badNameCard": {
+    "scenario": "error",
+    "number": "5555555555554444",
+    "holderName": "N",
+    "expirationDate": "12/30",
+    "cvv": "068",
+    "bank": "Nubank",
+    "text": "Nome deve ter pelo menos 2 caracteres"
+  },
+  "badDateCard": {
+    "scenario": "error",
+    "number": "378282246310005",
+    "holderName": "N",
+    "expirationDate": "15/30",
+    "cvv": "068",
+    "bank": "C6 Bank",
+    "text": "Data de expiração inválida ou vencida"
+  },
+  "badCvvCard": {
+    "scenario": "error",
+    "number": "2223003122003222",
+    "holderName": "Nelson Mendes",
+    "expirationDate": "12/30",
+    "cvv": "06",
+    "bank": "Will Bank",
+    "text": "CVV deve ter 3 ou 4 dígitos"
+  }
+}
