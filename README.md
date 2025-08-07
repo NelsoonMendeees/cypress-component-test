@@ -1,1 +1,1 @@
-cardify-dev
+[![Cypress Tests - Complete Project](https://github.com/NelsoonMendeees/cypress-component-test/actions/workflows/main.yml/badge.svg)](https://github.com/NelsoonMendeees/cypress-component-test/actions/workflows/main.yml)
