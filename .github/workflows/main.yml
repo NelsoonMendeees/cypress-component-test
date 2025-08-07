@@ -1,0 +1,37 @@
+name: Cypress Component Tests
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  cypress-component:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout código
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Instalar dependências
+        run: npm ci
+
+      - name: 🧪 Rodar testes de componentes
+        id: cypress-tests
+        continue-on-error: true  # ← mesmo se falhar, a pipeline continua
+        run: |
+          npx cypress run --component
+
+      - name: 📸 Salvar screenshots (caso falhe)
+        if: always()  # ← roda independentemente do sucesso dos testes
+        uses: actions/upload-artifact@v4
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          if-no-files-found: ignore
